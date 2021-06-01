@@ -33,7 +33,7 @@ class DataSourcesSQLite:
             self.sources[class_name] = instance
 
     def get_data(self):
-        """Collect data from hanlders"""
+        """Collect data from handlers"""
         data = {}
         for source in self.sources:
             try:

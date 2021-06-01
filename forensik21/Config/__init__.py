@@ -18,7 +18,6 @@ class Config:
     def set_profile_path(self, path: str):
         self.profile_path = path
 
-
     def set_cache_path(self, path: str):
         self.cache_path = path
 

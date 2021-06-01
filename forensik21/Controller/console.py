@@ -17,7 +17,7 @@ class Console(logging.Handler):
         self.textfield.tag_config("CRITICAL", foreground="red", underline=1)
         
 
-    
+
      # Insert a message into the console
     def emit(self, record):
         self.textfield.config(state=tk.NORMAL)
