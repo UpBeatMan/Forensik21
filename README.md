@@ -1,10 +1,10 @@
 # fiprotima
-Browser Profile Timestamp Manipulator forked from @hirthirth
+Browser Profile Timestamp Manipulator forked from hirthirth
 
 A tool for viewing and manipulating browser profiles on one place.
 Currently sorting profile entries domain-based and according to their timestamps.
 Manipulation-wise there is already a feature to manipulate timestamps on large scale bases
-thanks to the work of @hirthirt
+thanks to the work of hirthirt
 
 Version 0.1.0
 
