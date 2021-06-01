@@ -1,9 +1,42 @@
 # fiprotima
-Browser Profile Timestamp Manipulator 
+Browser Profile Timestamp Manipulator forked from @hirthirth
 
-## Vorausetzungen
+A tool for viewing and manipulating browser profiles on one place.
+Currently sorting profile entries domain-based and according to their timestamps.
+Manipulation-wise there is already a feature to manipulate timestamps on large scale bases
+thanks to the work of @hirthirt
+
+Version 0.1.0
+
+### Currently in development
+for at the least one browser type chromium or firefox - TBD
+
+1. Performance boosting through the introduction of a multithreaded environment
+2. Creation of a debug-mode (split it from the user-event log)
+3. Smaller GUI improvements
+  * button placement (profile load)
+  * profile loading bar
+  * Resizing GUI fields dynamically
+4. Adding another manipulating feature besides the time manipulation - TBD
+  * URL manipulation in history, form entries, Downloads, etc.
+  * Backup profile before manipulation process
+  * GUI changes for adding, deleting and changing data
+5. Testing detection rate of a manipulated profile in autopsy and other forensic tools
+6. Crosschecking the behavior of manipulated profiles with specific forensic test cases
+
+### On going
+* Fixing smaller bugs which will be discovered
+  * #TODO Edge Downloads won't show
+* Updating browser profile database changes(newer browser versions) in the browser views
+
+### In future
+1. Building a commit log feature for every loaded profile, which will be shown before loading new profiles --> a commit contains the changes between to profile storage points
+2. Solving c-time manipulation in UNIX systems [ADD LINK]
+3. GUI usability improvements
+
+## Requirements
 * Python 3
-* Module
+* Modules
   * SQLAlchemy
   * tksheet
   * tkcalendar
@@ -13,28 +46,34 @@ Browser Profile Timestamp Manipulator
   * pywin32
   * pypubsub
   * Pillow
-  
+
+# Installation Guide
+Use poetry to install and manage the requirements.
+
+Poetry will also automatically create a virtualenv for you.
 
 
-## Installation 
+###### MANUAL will continue in GERMAN LANGUAGE
+#TODO To be changed to English
+
+### Installation
 Zunächst muss Python 3.8 auf dem System installiert werden (https://www.python.org/downloads/)
 Danach muss mit pip das Modul 'pipenv' installiert werden (pip install pipenv)
 
-Dann in diesem Ordner eine Kommandozeile öffner und mit nachfolgenden Befehlen die 
+Dann in diesem Ordner eine Kommandozeile öffner und mit nachfolgenden Befehlen die
 virtuelle Python-Umgebung mitsamt benötigten Modulden installieren:
 
 `pipenv install`
 
-## Shell
+### Shell
 Dann die virtuelle Umgebung starten:
 `pipenv shell`
 
 Deaktiviere Shell mit
 `exit`
 
-## Start
+### Start
 Um das Programm zu starten müssen mit folgenden Befehlen zunächst in das src/-Verzeichnis gewechselt werden
 und anschliesend das Programm gestartet werden:
 `cd .src/`
 `python main.py`
-
