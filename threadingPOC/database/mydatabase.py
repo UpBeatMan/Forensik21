@@ -26,7 +26,7 @@ class MyDatabase:
             engine_url = self.DB_ENGINE[dbtype].format(DB=dbname)
 
             self.db_engine = create_engine(engine_url)
-            print(self.db_engine)
+            #print(self.db_engine)
 
             session_create = sessionmaker(bind=self.db_engine)
             # session_create.configure()
@@ -38,14 +38,16 @@ class MyDatabase:
     # Alternative Count
     def count_query(self):
         # sample query for testing
-        query = "SELECT count(id) FROM {TBL_HST};".format(
-            TBL_HST=HISTORY)
+        # print("\n")
+        query = "SELECT count(id) FROM {TBL_HST};".format(TBL_HST=HISTORY)
         self.print_all_data(query=query)
 
     # show all data from table
     def print_all_data(self, table='', query=''):
         query = query if query != '' else "SELECT * FROM '{}';".format(table)
-        print(query)
+
+        # output switch
+        #print(query)
 
         with self.db_engine.connect() as connection:
             try:
@@ -54,12 +56,14 @@ class MyDatabase:
                 print(e)
             else:
                 for row in result:
-                    print(row)
+                    # output switch
+                    #print(row)
+                    pass
+                #print("\n")
                 result.close()
 
-        print("\n")
 
-    # first try - not working yet
+    # first try - not working yet!
     def count_all_rows(self):
         from tables import formhistory
         #rows = self.session.query(func.count(self.history.id)).scalar()
