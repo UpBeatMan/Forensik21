@@ -5,7 +5,8 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+# python = "^3.8"
+python = "^3.9.5"
 pywin32 = "^301"
 SQLAlchemy = "^1.4.17"
 tksheet = "^5.0.25"
